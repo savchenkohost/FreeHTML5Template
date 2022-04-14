@@ -1,2 +1,2 @@
-# FTP/SSH deploy test.
-# Free HTML template.
+# FTP/SSH deploy test
+# Free HTML template
