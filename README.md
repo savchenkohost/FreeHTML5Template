@@ -1,3 +1,3 @@
 # FTP/SSH deploy test
 # Free HTML template
-Deploy5
+Deploy6
