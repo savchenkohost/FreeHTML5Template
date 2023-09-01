@@ -1,16 +1,16 @@
-name: Deploy via git-ftp
+name: FTP deploy on push
 on: push
 jobs:
-  deploy:
+  web-deploy:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - name: Get latest code
+      uses: actions/checkout@v3
+    - name: Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        fetch-depth: 0
-    - name: git-ftp push
-      uses: sebastianpopp/git-ftp-action@releases/v3
-      with:
-        url: "ftp://xf329983.ftp.tools/"
-        user: "xf329983_github"
-        password: "8eV4e62DDf!"
+        server: 'xf329983.ftp.tools'
+        username: 'xf329983_github'
+        password: '8eV4e62DDf!'
+        server-dir: '/'
